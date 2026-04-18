@@ -150,9 +150,12 @@ section { padding: clamp(80px, 11vw, 150px) 0; position: relative; z-index: 2; }
   .section-head { grid-template-columns: 1fr; gap: 20px; }
 }
 
-/* Page-level intro block, used at the top of inner pages */
+/* Page-level intro block, used at the top of inner pages.
+   Top padding is shared with .hero and .closing to keep the gap
+   between the sticky nav and the first content consistent across
+   every page. */
 .page-intro {
-  padding-top: clamp(60px, 8vw, 120px);
+  padding-top: clamp(28px, 3.5vw, 52px);
   padding-bottom: clamp(40px, 5vw, 80px);
 }
 .page-intro .eyebrow { margin-bottom: 18px; display: inline-block; }
@@ -248,7 +251,9 @@ nav.top .container {
 }
 
 /* ───────────── HERO (home only) ───────────── */
-.hero { padding-top: clamp(10px, 1.5vw, 18px); padding-bottom: clamp(60px, 8vw, 100px); }
+/* Top padding matches .page-intro + .closing for a consistent gap
+   between the sticky nav and the first line of content on every page. */
+.hero { padding-top: clamp(28px, 3.5vw, 52px); padding-bottom: clamp(60px, 8vw, 100px); }
 
 .hero-meta {
   display: flex;
@@ -436,7 +441,8 @@ nav.top .container {
    Applied via <body class="page-opportunity"> on pages that
    need the tighter vertical rhythm for tabbed content. */
 body.page-opportunity .page-intro {
-  padding-top: clamp(28px, 3.5vw, 52px);
+  /* Top gap comes from the shared .page-intro rule now; only override
+     the bottom to keep the intro compact before the tabs module. */
   padding-bottom: clamp(16px, 2vw, 28px);
 }
 body.page-opportunity .page-intro h1 {
@@ -806,7 +812,8 @@ body.page-opportunity .opportunity-body {
 }
 
 /* ───────────── CLOSING (Talk page) ───────────── */
-.closing { padding: clamp(100px, 14vw, 180px) 0; }
+/* Top matches .page-intro + .hero for a consistent sub-nav gap. */
+.closing { padding: clamp(28px, 3.5vw, 52px) 0 clamp(80px, 10vw, 140px); }
 .closing h2 {
   font-size: clamp(2.2rem, 5.6vw, 4.4rem);
   max-width: 18ch;
