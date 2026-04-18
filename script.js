@@ -5,14 +5,19 @@
    ═══════════════════════════════════════════════════════════════ */
 
 /* ─────────────────────────────────────────────────────────────
-   Active nav link — underline the current page in the top nav
+   Active nav link — underline the current page in the top nav.
+   Normalises both sides so that ./foo.html and /subdir/foo.html
+   resolve to the same filename for comparison.
    ───────────────────────────────────────────────────────────── */
 (function () {
-  const path = (location.pathname.split('/').pop() || 'index.html').toLowerCase();
+  const normalise = path => {
+    const last = path.split('/').pop();
+    return (last === '' ? 'index.html' : last).toLowerCase();
+  };
+  const currentPage = normalise(location.pathname);
   document.querySelectorAll('nav.top .nav-links a').forEach(a => {
-    const href = a.getAttribute('href').toLowerCase();
-    const isHome = (path === '' || path === 'index.html') && (href === 'index.html' || href === './' || href === '/');
-    if (href === path || isHome) a.classList.add('active');
+    const linkPage = normalise(new URL(a.href, location.href).pathname);
+    if (linkPage === currentPage) a.classList.add('active');
   });
 })();
 

@@ -8,6 +8,7 @@
   --bg:           #F5F2EA;
   --bg-elev:      #FAF7F0;
   --bg-card:      #FFFFFF;
+  --bg-nav:       #EBE5D4;  /* slightly darker than --bg — separates sticky nav from content */
   --text:         #1A1612;
   --text-muted:   #6B5F4F;
   --text-quiet:   #A89F90;
@@ -173,11 +174,14 @@ nav.top {
   z-index: 100;
   backdrop-filter: blur(18px) saturate(140%);
   -webkit-backdrop-filter: blur(18px) saturate(140%);
-  background: color-mix(in srgb, var(--bg) 80%, transparent);
-  border-bottom: 1px solid transparent;
-  transition: border-color 0.3s ease;
+  background: color-mix(in srgb, var(--bg-nav) 94%, transparent);
+  border-bottom: 1px solid var(--rule);
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
 }
-nav.top.scrolled { border-bottom-color: var(--rule); }
+nav.top.scrolled {
+  border-bottom-color: var(--rule-strong);
+  box-shadow: 0 4px 20px -12px rgba(58, 38, 20, 0.12);
+}
 
 nav.top .container {
   display: flex;
@@ -243,12 +247,12 @@ nav.top .container {
 }
 
 /* ───────────── HERO (home only) ───────────── */
-.hero { padding-top: clamp(40px, 6vw, 72px); padding-bottom: clamp(60px, 8vw, 100px); }
+.hero { padding-top: clamp(20px, 2.5vw, 32px); padding-bottom: clamp(60px, 8vw, 100px); }
 
 .hero-meta {
   display: flex;
   gap: 24px;
-  margin-bottom: 36px;
+  margin-bottom: 28px;
   flex-wrap: wrap;
   align-items: center;
 }
