@@ -82,4 +82,8 @@ Depends on project scope — no default web stack. Define as needed.
 
 > **Optional, ephemeral.** A 2–3 line free-form scratch pad of "where I left off" — not durable knowledge. Durable decisions belong in the vault project page. Wipe and rewrite freely.
 
-Last action: scaffolded project via og-project skill. Next action: brainstorm scope and target customer profile. Open question: is this a solo offering or a productized assessment template?
+Last action (2026-04-18): Shipped 4-page microsite (Home, Opportunity with tabs, Economics, Talk), Warm Editorial theme (cream + terracotta, DM Sans + Instrument Serif). Deployed to GitHub Pages: https://parrysan.github.io/OS-005-AI-Assessment-Service/
+In progress: Monday 20 April 11:00–12:00 CET call with Charlie and Roberto — this site is the pre-read. Jitsi URL still generic (meet.jit.si) — swap in specific room URL when calendar invite carries one.
+Pending: Port ODS os-001 Header component (shrink-on-scroll + mobile drawer) into the site nav — currently bespoke. Also stake three staging stubs in ODS catalogue/staging/: editorial page nav, editorial tabs variant, editorial lightbox gallery.
+Open: After Monday, decide — solo offering vs productized assessment template?
+Key links: repo https://github.com/parrysan/OS-005-AI-Assessment-Service · vault page projects/OS-005-AI-Assessment-Service/README.md · theme wiki/warm-editorial-theme.md
