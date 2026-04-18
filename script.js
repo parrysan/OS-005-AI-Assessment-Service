@@ -5,11 +5,13 @@
    ═══════════════════════════════════════════════════════════════ */
 
 /* ─────────────────────────────────────────────────────────────
-   Active nav link — underline the current page in the top nav.
-   Normalises both sides so that ./foo.html and /subdir/foo.html
-   resolve to the same filename for comparison.
+   Active nav link — now declared per-page in HTML (class="active"
+   on the correct <a>). This JS block is kept as a belt-and-braces
+   fallback in case someone forgets to set it on a new page.
    ───────────────────────────────────────────────────────────── */
 (function () {
+  // If any nav link already carries .active, trust the HTML and stop.
+  if (document.querySelector('nav.top .nav-links a.active')) return;
   const normalise = path => {
     const last = path.split('/').pop();
     return (last === '' ? 'index.html' : last).toLowerCase();
