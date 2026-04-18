@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>The AI Assessment Service — An opportunity memo</title>
+  <meta name="description" content="A practical AI assessment service for small and medium-sized businesses. Internal opportunity memo, April 2026.">
+  <meta name="color-scheme" content="light">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./styles.css">
+  <script src="./script.js" defer></script>
+</head>
+<body>
+
+  <!-- ════ TOP NAV (shared markup — keep in sync across pages) ════ -->
+  <nav class="top" id="topnav" aria-label="Primary">
+    <div class="container">
+      <a href="./index.html" class="wordmark">
+        <span class="dot" aria-hidden="true"></span>
+        <span>Opportunity Memo · Q2 2026</span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="./index.html">Home</a></li>
+        <li><a href="./opportunity.html">Opportunity</a></li>
+        <li><a href="./economics.html">Economics</a></li>
+        <li><a href="./talk.html">Talk</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- ════ HERO ════ -->
+  <header id="top" class="hero">
+    <div class="container">
+
+      <div class="hero-meta">
+        <span class="eyebrow">For the immediate network</span>
+        <span class="eyebrow muted">Internal · April 2026</span>
+      </div>
+
+      <h1 class="display serif">
+        A practical AI service<br>
+        small businesses<br>
+        <em>are starting to ask for.</em>
+      </h1>
+
+      <div class="hero-grid">
+
+        <!-- VIDEO COLUMN
+             ─────────────────────────────────────────────────
+             Swap ./assets/opportunity-overview.mp4 with your own.
+             Optional: drop a still at ./assets/poster.jpg.
+             ───────────────────────────────────────────────── -->
+        <div class="hero-video-col">
+          <div class="video-frame">
+            <div class="video-inner">
+              <video id="hero-video"
+                     controls
+                     preload="metadata"
+                     playsinline
+                     poster="./assets/poster.jpg">
+                <source src="./assets/opportunity-overview.mp4" type="video/mp4">
+                Your browser doesn't support embedded video.
+              </video>
+              <button class="video-overlay" id="video-overlay" aria-label="Play opportunity overview">
+                <span class="play-button" aria-hidden="true">
+                  <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                </span>
+              </button>
+            </div>
+          </div>
+          <div class="video-caption">
+            <span class="label">Press play</span>
+            <span>The opportunity in plain English — recorded April 2026.</span>
+          </div>
+        </div>
+
+        <!-- TEXT COLUMN -->
+        <div class="hero-text-col">
+          <p class="lede">
+            Mid-market and small businesses have stopped asking <em class="italic">whether</em> AI applies to them. They're asking which two things to do this quarter — and they're willing to pay for the answer.
+          </p>
+          <div class="ctas">
+            <a href="./opportunity.html" class="cta-link">Read the opportunity</a>
+            <a href="./economics.html"   class="cta-link">See the economics</a>
+            <a href="./talk.html"        class="cta-link">Join Monday's call</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </header>
+
+  <!-- ════ FOOTER ════ -->
+  <footer>
+    <div class="container">
+      <span>OS-005 · AI Assessment Service · Internal opportunity memo</span>
+      <span>April 2026 · Phil Parry</span>
+    </div>
+  </footer>
+
+</body>
+</html>
